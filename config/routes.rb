@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get("/dice", :controller => "dice", :action => "index")
   get("/companies", :controller => "companies", :action => "index")
   get("/poker", :controller => "poker", :action => "index")
+  get("/bitcoin", :controller => "bitcoin", :action => "index")
 end
