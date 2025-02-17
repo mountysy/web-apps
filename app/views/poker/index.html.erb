@@ -1,0 +1,27 @@
+<h1> Poker </h1>
+
+<%
+ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
+suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
+
+deck = []
+for rank in ranks
+  for suit in suits
+    card = "#{rank} of #{suit}"
+    deck.push(card)
+  end
+end
+
+shuffled_deck = deck.shuffle
+
+%>
+
+<ul>
+  <%for shuffled_card in shuffled_deck[0,5]%>
+  <li> <%= shuffled_card %> </li>
+  <% end %>
+</ul>
+
+<p>
+  <a href="/poker">Shuffle and deal 5 cards again</a>
+</p>
